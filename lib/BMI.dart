@@ -34,7 +34,9 @@ class _BMIState extends State<BMI> {
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
-                          isMale = true;
+                          setState(() {
+                            isMale = true;
+                          });
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -69,7 +71,9 @@ class _BMIState extends State<BMI> {
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
-                          isMale = false;
+                           setState(() {
+                            isMale = false;
+                          });
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -152,7 +156,9 @@ class _BMIState extends State<BMI> {
                   ),
                   Slider(
                     onChanged: (value) {
-                      height = value;
+                     setState(() {
+                        height = value;
+                      });
                     },
                     value: height,
                     min: 80,
